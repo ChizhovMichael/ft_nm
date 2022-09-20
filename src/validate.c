@@ -64,10 +64,6 @@ int validate_size(char *dst, unsigned long size) {
         if ((dst + SWAP32(ehdr32->e_shoff)) > (dst + size))
             return ERROR_FORMAT_CODE;
 
-//        if (SWAP32(ehdr32->e_shentsize) >
-//            SWAP32(ehdr32->e_phoff) + SWAP32(ehdr32->e_phentsize) * SWAP32(ehdr32->e_phnum)) {
-//            return ERROR_FORMAT_CODE;
-//        }
 
         if (SWAP32(ehdr32->e_phoff) +
             SWAP32(ehdr32->e_phentsize) * SWAP32(ehdr32->e_phnum) > size)
@@ -88,10 +84,6 @@ int validate_size(char *dst, unsigned long size) {
         if ((dst + SWAP64(ehdr64->e_shoff)) > (dst + size))
             return ERROR_FORMAT_CODE;
 
-//        if (SWAP64(ehdr64->e_shentsize) >
-//            SWAP64(ehdr64->e_phoff) + SWAP64(ehdr64->e_phentsize) * SWAP64(ehdr64->e_phnum)) {
-//            return ERROR_FORMAT_CODE;
-//        }
 
         if (SWAP64(ehdr64->e_phoff) +
             SWAP64(ehdr64->e_phentsize) * SWAP64(ehdr64->e_phnum) > size)
