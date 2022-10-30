@@ -9,5 +9,5 @@ Your program must behave like the system nm on every aspect. You have to work wi
 <h3>How to use it</h3>
 <p>Simply run the setup in main folder :</p>
 <pre>
-<code>make build && make</code>
+<code>make build && make all</code>
 </pre>
